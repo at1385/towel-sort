@@ -1,6 +1,3 @@
-
-// You should implement your task here.
-
 module.exports = function towelSort (matrix) {
-  return [];
+  return matrix ? matrix.map((item, index) => index % 2 ? item.sort((a, b) => b - a) : item.sort((a, b) => a - b)).reduce((a, b) => a.concat(b), []) : [];
 }
